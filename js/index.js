@@ -22,13 +22,14 @@ function renderHome() {
 function navHome() {
     const homeNavBtn = document.querySelector(".home");
 
-    homeNavBtn.addEventListener("click", () =>{
+    homeNavBtn.addEventListener("click", () => {
         renderHome();
     });
 }
 
 function renderProjects() {
     const projectsMinBtn = document.querySelector(".min-btn");
+    const projectsGrid = document.querySelector(".projects-grid");
 
     projectsMinBtn.addEventListener("click", () => {
         const projectsElem = document.getElementById("projects");
@@ -65,6 +66,46 @@ function renderProjects() {
             readMore(readMoreBtn);
             console.log(readMoreBtn);
         }, 3250);
+    });
+
+    projectsGrid.addEventListener("click", () => {
+        const projectsElem = document.getElementById("projects");
+        const headerElem = document.getElementById("header");
+        const contactElem = document.getElementById("contact");
+
+        projectsElem.classList.remove("animate__zoomIn");
+        projectsElem.classList.add("animate__fadeOut");
+
+        headerElem.classList.remove("animate__zoomIn");
+        headerElem.classList.add("animate__fadeOut");
+        // headerElem.classList.add("animate__delay-1s");
+
+        contactElem.classList.remove("animate__zoomIn");
+        contactElem.classList.add("animate__fadeOut");
+        // contactElem.classList.add("animate__delay-2s");
+
+        setTimeout(() => {
+            projectsElem.classList.remove("flex");
+            projectsElem.classList.add("none");
+            projectsElem.classList.remove("animate__fadeOut");
+
+            headerElem.classList.remove("flex");
+            headerElem.classList.add("none");
+            headerElem.classList.remove("animate__fadeOut");
+
+            contactElem.classList.remove("flex");
+            contactElem.classList.add("none");
+            contactElem.classList.remove("animate__fadeOut");
+
+
+            app.innerHTML = Projects();
+            const projects = document.getElementById("projects");
+            projects.classList.add("animate__animated")
+            projects.classList.add("animate__fadeInUpBig")
+            const readMoreBtn = document.getElementById("read-more-btn")
+            readMore(readMoreBtn);
+            console.log(readMoreBtn);
+        }, 1000);
     });
 }
 

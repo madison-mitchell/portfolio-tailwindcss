@@ -544,6 +544,7 @@ function navHome() {
 }
 function renderProjects() {
     const projectsMinBtn = document.querySelector(".min-btn");
+    const projectsGrid = document.querySelector(".projects-grid");
     projectsMinBtn.addEventListener("click", ()=>{
         const projectsElem = document.getElementById("projects");
         const headerElem = document.getElementById("header");
@@ -571,6 +572,37 @@ function renderProjects() {
             readMore(readMoreBtn);
             console.log(readMoreBtn);
         }, 3250);
+    });
+    projectsGrid.addEventListener("click", ()=>{
+        const projectsElem = document.getElementById("projects");
+        const headerElem = document.getElementById("header");
+        const contactElem = document.getElementById("contact");
+        projectsElem.classList.remove("animate__zoomIn");
+        projectsElem.classList.add("animate__fadeOut");
+        headerElem.classList.remove("animate__zoomIn");
+        headerElem.classList.add("animate__fadeOut");
+        // headerElem.classList.add("animate__delay-1s");
+        contactElem.classList.remove("animate__zoomIn");
+        contactElem.classList.add("animate__fadeOut");
+        // contactElem.classList.add("animate__delay-2s");
+        setTimeout(()=>{
+            projectsElem.classList.remove("flex");
+            projectsElem.classList.add("none");
+            projectsElem.classList.remove("animate__fadeOut");
+            headerElem.classList.remove("flex");
+            headerElem.classList.add("none");
+            headerElem.classList.remove("animate__fadeOut");
+            contactElem.classList.remove("flex");
+            contactElem.classList.add("none");
+            contactElem.classList.remove("animate__fadeOut");
+            app.innerHTML = _projectsJsDefault.default();
+            const projects = document.getElementById("projects");
+            projects.classList.add("animate__animated");
+            projects.classList.add("animate__fadeInUpBig");
+            const readMoreBtn = document.getElementById("read-more-btn");
+            readMore(readMoreBtn);
+            console.log(readMoreBtn);
+        }, 1000);
     });
 }
 function readMore(readMoreBtn) {
@@ -609,7 +641,7 @@ function Home() {
                 <div class="btn min-btn"></div>
                 <div class="btn max-btn"></div>
             </div>
-            <div class="grid grid-cols-3 gap-x-5">
+            <div class="projects-grid grid grid-cols-3 gap-x-5">
                 <div class="text col-span-2 text-center inline-block flex flex-col justify-center">
                     <h1 class="text-2xl pb-2">
                         Projects

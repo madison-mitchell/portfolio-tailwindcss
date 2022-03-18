@@ -13,7 +13,7 @@ export default function Home() {
                 <div class="btn min-btn"></div>
                 <div class="btn max-btn"></div>
             </div>
-            <div class="grid grid-cols-3 gap-x-5">
+            <div class="projects-grid grid grid-cols-3 gap-x-5">
                 <div class="text col-span-2 text-center inline-block flex flex-col justify-center">
                     <h1 class="text-2xl pb-2">
                         Projects
