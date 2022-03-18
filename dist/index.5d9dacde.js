@@ -742,8 +742,8 @@ module.exports = require('./helpers/bundle-url').getBundleURL('ksUvU') + "memoji
 },{"./helpers/bundle-url":"lgJ39"}],"8t3va":[function() {},{}],"e48wQ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _ohioansCare187C26025Gif = require("../../dist/ohioansCare-1.87c26025.gif");
-var _ohioansCare187C26025GifDefault = parcelHelpers.interopDefault(_ohioansCare187C26025Gif);
+var _ohioansCareGif = require("../../assets/OhioansCare.gif");
+var _ohioansCareGifDefault = parcelHelpers.interopDefault(_ohioansCareGif);
 function Projects() {
     return `
     <div id="projects" class="flex justify-around">
@@ -756,7 +756,7 @@ function Projects() {
                 </div>
                 <div class="flex flex-col p-5">
                     <div class="flex justify-center">
-                        <img class="" src="${_ohioansCare187C26025GifDefault.default}">
+                        <img class="" src="${_ohioansCareGifDefault.default}">
                     </div>
                     <div class="p-5">
                         <div class="text-center text-2xl">
@@ -787,8 +787,8 @@ function Projects() {
 }
 exports.default = Projects;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../../dist/ohioansCare-1.87c26025.gif":"9t0fr"}],"9t0fr":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('ksUvU') + "ohioansCare-1.87c26025.2bf28aaf.gif" + "?" + Date.now();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../../assets/OhioansCare.gif":"4NYpI"}],"4NYpI":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('ksUvU') + "OhioansCare.326bb8b9.gif" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}]},["adtRi","1Z4Rq"], "1Z4Rq", "parcelRequire94c2")
 
