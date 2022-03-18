@@ -12,7 +12,7 @@ export default function Projects() {
                 </div>
                 <div class="flex flex-col p-5">
                     <div class="flex justify-center">
-                        <img class="" src="${ohioansCare}">
+                        <img class="" src="${ohioansCare-1.87c26025.gif}">
                     </div>
                     <div class="p-5">
                         <div class="text-center text-2xl">
