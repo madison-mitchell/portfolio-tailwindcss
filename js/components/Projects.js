@@ -1,4 +1,4 @@
-import ohioansCare from "../../dist/ohioansCare-1.87c26025.gif";
+import ohioansCare from "../../dist/ohioansCare-1.87c26025.gif"
 
 export default function Projects() {
     return `
